@@ -25,7 +25,7 @@
     ])
 
 (set-env!
- :source-paths #{"src/main"}
+ ;; :source-paths #{"src/main"}
  :dependencies +dependencies+)
 
 (ns boot.user
