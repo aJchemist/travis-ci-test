@@ -11,8 +11,8 @@ install:
   - curl -L https://github.com/boot-clj/boot-bin/releases/download/2.7.2/boot.sh -o ~/bin/boot
   - chmod +x ~/bin/boot
   # docker
-  - docker pull jarkt/docker-remote-api
-  - docker run -d -p 2375:2375 -v /var/run/docker.sock:/var/run/docker.sock jarkt/docker-remote-api
+  # - docker pull jarkt/docker-remote-api
+  # - docker run -d -p 2375:2375 -v /var/run/docker.sock:/var/run/docker.sock jarkt/docker-remote-api
 cache:
   directories:
   - $HOME/.m2
@@ -21,3 +21,4 @@ cache:
   - $HOME/bin
 script:
   - travis_retry boot show -d
+  - travis_retry curl http://127.0.0.1:2375/version
