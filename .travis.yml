@@ -18,3 +18,5 @@ cache:
   - $HOME/bin
 script:
   - travis_retry boot --version
+  - travis_retry boot show -d
+  - travis_retry docker --version
